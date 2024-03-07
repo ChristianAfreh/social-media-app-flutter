@@ -1,4 +1,7 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import 'package:social_media_app_flutter/widgets/following_users.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,6 +53,11 @@ class _HomeScreenState extends State<HomeScreen>
             Tab(text: 'Latest'),
           ],
         ),
+      ),
+      body: ListView(
+        children: const <Widget>[
+          FollowingUsers(),
+        ],
       ),
     );
   }
