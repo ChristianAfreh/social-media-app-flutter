@@ -1,6 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:social_media_app_flutter/screens/home_screen.dart';
 import 'package:social_media_app_flutter/widgets/curve_clipper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -78,7 +79,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 40.0),
               GestureDetector(
-                onTap: () {},
+                onTap: () => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const HomeScreen(),
+                  ),
+                ),
                 child: Container(
                   alignment: Alignment.center,
                   margin: const EdgeInsets.symmetric(horizontal: 60.0),
